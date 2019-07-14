@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Righteous"
+      rel="stylesheet"
+    />
+
+    <title>Local Storage</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Righteous", cursive;
+      }
+      header {
+        width: 100%;
+        height: 50px;
+        background-color: purple;
+        display: flex;
+        justify-content: space-between;
+
+        font-weight: bolder;
+      }
+
+      #showUserName,
+      #showLogRequire {
+        color: white;
+        font-size: 20px;
+        margin: 10px 5px;
+      }
+      #loginbtn,
+      #registerbtn {
+        font-size: 15px;
+        width: 150px;
+        height: 40px;
+        margin: 5px 5px;
+        background-color: yellow;
+        border-radius: 10px;
+        font-family: "Righteous", cursive;
+      }
+      form {
+        border: 3px solid purple;
+        width: 800px;
+        height: 400px;
+        margin: 50px auto;
+      }
+
+      #registForm {
+        height: 600px;
+      }
+      input {
+        width: 595px;
+        margin: 10px 100px;
+        padding: 10px;
+        height: 40px;
+      }
+      #registTitle,
+      #loginTitle {
+        width: 600px;
+        height: 40px;
+        text-align: center;
+        background-color: purple;
+        font-size: 30px;
+        color: white;
+        margin: 50px 100px;
+      }
+
+      #regFormBtn,
+      #logFromBtn {
+        height: 50px;
+        width: 600px;
+        border-radius: 10px;
+        background-color: purple;
+        color: white;
+        font-family: "Righteous", cursive;
+        font-size: 20px;
+        margin: 10px 100px;
+      }
+
+      #username,
+      #password,
+      #classCodeDiv,
+      #email {
+        font-size: 15px;
+      }
+
+      #emailHelp {
+        margin-left: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div id="showLogRequire"></div>
+      <div>
+        <button id="loginbtn">Login</button>
+        <button id="registerbtn">Register</button>
+      </div>
+    </header>
+    <main>
+      <!-- register part -->
+      <form id="registForm" hidden>
+        <div id="registTitle">Register</div>
+        <input
+          id="username"
+          type="text"
+          placeholder="Enter your username here"
+        />
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter your password here"
+        />
+        <div id="classCodeDiv" class="form-group">
+          <!-- <label for="classCode">Class Code</label> -->
+          <input
+            id="classCode"
+            type="text"
+            class="form-control"
+            placeholder="Enter your class code"
+          />
+        </div>
+        <div class="form-group">
+          <!-- <label for="email">Email</label> -->
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            placeholder="Enter Your Email"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >This email will be your username also.</small
+          >
+        </div>
+
+        <button id="regFormBtn">Register Now</button>
+      </form>
+
+      <form id="loginForm">
+        <div id="loginTitle">Login</div>
+        <input id="username2" type="text" placeholder="your username here" />
+        <input
+          id="password2"
+          type="password"
+          placeholder="your password here"
+        />
+        <button id="logFromBtn">Login</button>
+      </form>
+    </main>
+    <script src="practise.js"></script>
+  </body>
+</html>

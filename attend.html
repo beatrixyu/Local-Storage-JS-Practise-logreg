@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Attendence Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Righteous"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Righteous", cursive;
+        color: grey;
+        font-size: 15px;
+      }
+
+      header {
+        width: 100%;
+        height: 50px;
+        background-color: purple;
+        display: flex;
+        justify-content: space-between;
+
+        font-weight: bolder;
+      }
+
+      #showUserName,
+      #showLogRequire {
+        color: white;
+        font-size: 20px;
+        margin: 10px 5px;
+      }
+
+      .container {
+        width: 90%;
+        display: inline-block;
+      }
+      .coming {
+        width: 80%;
+        background-color: purple;
+        color: white;
+      }
+      .leaving {
+        width: 80%;
+        background-color: yellow;
+        color: grey;
+      }
+
+      #time-check-table {
+        margin-top: 50px;
+      }
+
+      #time-check-table td {
+        width: 25%;
+        text-align: center;
+      }
+      #time-check-table tr {
+        color: black;
+        font-size: 15px;
+      }
+      #main-table {
+        width: 300px;
+      }
+      #main-table img {
+        width: 90%;
+        padding: 0;
+      }
+      #main-table th {
+        width: 150px;
+        padding: 0;
+      }
+      #name-table {
+        width: 350px;
+        flex-flow: left;
+      }
+
+      #name-table td {
+        text-align: left;
+        width: 300px;
+        color: purple;
+      }
+      .profileTable {
+        margin-left: 5%;
+        margin-top: 3%;
+        display: flex;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div id="showLogRequire">Welcome! <span id="welcomeUser"></span></div>
+      <button id="logout">Logout</button>
+    </header>
+
+    <!-- the attendence table -->
+    <div class="container">
+      <div class="profileTable">
+        <table id="main-table">
+          <tr>
+            <th rowspan="6">
+              <img
+                src="../assets/personal-photos/teacup-chihuahua_6.jpg"
+                alt="Please login"
+              />
+            </th>
+          </tr>
+        </table>
+
+        <table id="name-table">
+          <tr>
+            <td>First Name:</td>
+            <td id="name"></td>
+          </tr>
+          <tr>
+            <td>Last Name:</td>
+            <td id="lastName">Blome</td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td id="email"></td>
+          </tr>
+          <tr>
+            <td>Class Code:</td>
+            <td id="class-code"></td>
+          </tr>
+        </table>
+      </div>
+
+      <table id="time-check-table">
+        <tr>
+          <td>Date</td>
+          <td>Coming time</td>
+          <td>Leaving Time</td>
+          <td>Staying Time</td>
+          <td>Status</td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="./table.js"></script>
+  </body>
+</html>
